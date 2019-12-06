@@ -1,8 +1,9 @@
 // start of pipeline
 pipeline {
-  // where pipeline job will run
-	agent any
-  
+  agent {
+    // force pipeline job to running on windows_agent
+    label "Windows_Agent"
+  }
   // start of stages : build, test, deploy ...
   stages {
     // start of stage : build
